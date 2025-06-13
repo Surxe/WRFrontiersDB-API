@@ -3,7 +3,7 @@ services:
     name: game-data-api
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python src/app.py
+    startCommand: python src/run.py
     envVars:
       - key: PORT
         value: 10000

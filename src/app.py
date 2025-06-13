@@ -16,9 +16,3 @@ def items():
     items = conn.execute('SELECT * FROM items').fetchall()
     conn.close()
     return jsonify([dict(item) for item in items])
-
-if __name__ == '__main__':
-    import os
-
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
